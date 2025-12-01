@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="login-form">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha"><br><br>
+    <button id="entrar-btn" type="submit">Entrar</button>
+    <p><a href="reset.html">Esqueci minha senha</a></p>
+    <p><a href="criar_conta.html">Criar Conta</a></p>
+  </form>
+
+  <script>
+    document.getElementById('entrar-btn').addEventListener('click', function(event) {
+      event.preventDefault();
+      var email = document.getElementById('email').value;
+      var senha = document.getElementById('senha').value;
+      if (email === '' || senha === '') {
+        alert('Preencha todos os campos.');
+      } else {
+        // Redirecionar para a página home
+        window.location.href = 'home.html';
+      }
+    });
+  </script>
+</body>
+</html>
